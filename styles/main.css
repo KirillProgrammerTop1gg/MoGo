@@ -329,11 +329,11 @@
   display: flex;
   align-items: center;
   justify-content: baseline;
+  margin: 0 auto;
 }
 @media screen and (min-width: 320px) {
   .services-section__item {
-    min-width: 100%;
-    max-width: 450px;
+    width: 300px;
   }
   .services-section__item:nth-child(n+2) {
     margin-top: 30px;
@@ -341,8 +341,6 @@
 }
 @media screen and (min-width: 480px) {
   .services-section__item {
-    min-width: auto;
-    max-width: none;
     width: 450px;
   }
 }

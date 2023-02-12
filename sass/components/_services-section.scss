@@ -30,16 +30,14 @@
     }
     &__item {
         @include flex(baseline);
+        margin: 0 auto;
         @media screen and (min-width: 320px) {
-            min-width: 100%;
-            max-width: 450px;
+            width: 300px;
             &:nth-child(n+2) {
                 margin-top: 30px;
             }
         }
         @media screen and (min-width: 480px) {
-            min-width: auto;
-            max-width: none;
             width: 450px;
         }
         @media screen and (min-width: 768px) {
