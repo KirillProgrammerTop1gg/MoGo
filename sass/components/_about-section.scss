@@ -1,0 +1,112 @@
+.about-section {
+    padding-bottom: 80px;
+    &__text {
+        @include text-style('Roboto',400,15px,1.2,$text-color);
+        text-align: center;
+        @media screen and (min-width: 320px) {
+            min-width: 100%;
+            max-width: 450px;
+        }
+        @media screen and (min-width: 480px) {
+            min-width: auto;
+            max-width: none;
+            width: 450px;
+        }
+        @media screen and (min-width: 768px) {
+            width: 672px;
+        }
+        @media screen and (min-width: 1200px) {
+            width: 1104px;
+        }
+        margin: 45px auto 0;
+    }
+    &__list {
+        @include flex(center);
+        flex-wrap: wrap;
+        margin: 27px auto 0;
+        gap: 20px;
+    }
+    &__item {
+        position: relative;
+    }
+    &__item:hover>&__overlay {
+        opacity: 1;
+    }
+    &__photo{
+        @media screen and (min-width: 320px) {
+            min-width: 100%;
+            width: 100%;
+            max-width: 450px;
+        }
+        @media screen and (min-width: 480px) {
+            width: 450px;
+            min-width: auto;
+            max-width: none;
+        }
+        @media screen and (min-width: 768px) {
+            width: 350px;
+        }
+        @media screen and (min-width: 1200px) {
+            width: 380px;
+        }
+    }
+    &__name {
+        @include text-style('Montserrat',400,14px,1.21,$submain-color);
+        text-align: center;
+        font-variant: small-caps;
+        color: $submain-color;
+        margin-top: 30px;
+    }
+    &__pos {
+        @include text-style('Roboto',300,15px,1.2,$text-color);
+        font-style: italic;
+        text-align: center;
+        margin-top: 11px;
+    }
+    &__overlay {
+        top: 0;
+        opacity: 0;
+        position: absolute;
+        @media screen and (min-width: 320px) {
+            min-width: 100%;
+            max-width: 450px;
+            height: 83.5%;
+            translate: 0px;
+        }
+        @media screen and (min-width: 768px) {
+            translate: -10px -10px;
+            min-width: auto;
+            max-width: none;
+            width: 360px;
+            height: 445px;
+        }
+        @media screen and (min-width: 1200px) {
+            width: 380px;
+            height: 470px;
+        }
+        background: linear-gradient(180deg, rgba(239, 139, 138, 0.8) 0%, rgba(229, 207, 130, 0.8) 100%);
+        @include flex(center);
+        transition: all ease-in-out 0.4s;
+    }
+}
+
+.soc {
+    display: flex;
+    width: 231px;
+    justify-content: space-between;
+    &__item {
+        width: 57px;
+        height: 57px;
+        background: $svg-color;
+        transition: all ease-in 0.2s;
+        @include flex(center);
+    }
+    &__item:hover {
+        background: $svg-active-color;
+    }
+    &__svg {
+        fill: $active-color;
+        width: 26px;
+        height: 26px;
+    }
+}

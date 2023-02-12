@@ -1,0 +1,26 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.services-section__subtitle,
+.about-section__subtitle {
+    @include text-style('Kaushan Script',400,24px,1.46,$submain-color);
+    text-align: center;
+}
+
+.services-section__title,
+.about-section__title {
+    @include text-style('Montserrat',700,30px,1.23,$submain-color);
+    font-variant: small-caps;
+    text-align: center;
+    width: initial;
+    margin-top: 20px;
+}
+
+.services-section__line,
+.about-section__line {
+    margin: 40px auto 0;
+    background-color: $active-color;
+    width: 60px;
+    height: 4px;
+}
